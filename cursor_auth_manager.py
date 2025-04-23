@@ -39,11 +39,11 @@ class CursorAuthManager:
         updates.append(("cursorAuth/cachedSignUpType", "Auth_0"))
 
         if email is not None:
-            updates.append(("cursorAuth/cachedEmail", email))
+            updates.append((f"cursorAuth/cachedEmail_{email}", email))
         if access_token is not None:
-            updates.append(("cursorAuth/accessToken", access_token))
+            updates.append((f"cursorAuth/accessToken_{email}", access_token))
         if refresh_token is not None:
-            updates.append(("cursorAuth/refreshToken", refresh_token))
+            updates.append((f"cursorAuth/refreshToken_{email}", refresh_token))
 
         if not updates:
             print("没有提供任何要更新的值")

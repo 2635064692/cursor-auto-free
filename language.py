@@ -282,7 +282,7 @@ class Language:
         
         while True:
             try:
-                choice = int(input().strip())
+                choice = 1
                 if choice == 1:
                     self.set_language("cn")
                     print(self.get("language_selected"))
